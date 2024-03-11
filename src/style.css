@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #4d0082, #000000);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  background: linear-gradient(to right, #6e0aeb, #7d23ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  padding: 15px 30px;
+  background-color: #6e0aeb;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #7d23ff;
+  transform: scale(1.05);
+}
+
+.activity-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+
+.activity-list li {
+  list-style: none;
+}
+
+.activity-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.activity-list li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.selected a {
+  color: red;
+}
+
+.selected a:hover {
+  background-color: transparent;
+}
+
+.selected a::before {
+  content: "\1F525";
+  margin-right: 10px;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(1);
+    color: red;
+  }
+  100% {
+    transform: scale(1.2);
+    color: #ff000080;
+  }
+}
